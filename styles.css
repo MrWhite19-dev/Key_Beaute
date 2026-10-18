@@ -1,0 +1,85 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brown:#2a1007;--brown2:#4b1f0b;--gold:#d9a83d;--gold2:#f2cf79;--cream:#f7efe4;--white:#fffaf3;--ink:#21140f;--muted:#7a665a}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",Arial,sans-serif;background:var(--brown);color:var(--white);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.header{position:sticky;top:0;z-index:1000;height:82px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(36,13,5,.96);border-bottom:1px solid rgba(217,168,61,.35);backdrop-filter:blur(12px)}
+.brand,.footer-brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-family:"Playfair Display",serif;font-size:19px}
+.brand strong,.footer-brand strong{display:block;font-family:"Playfair Display",serif;letter-spacing:2px;font-size:18px}
+.brand small,.footer-brand small{display:block;font-size:10px;color:#e9d8c7}
+.nav{display:flex;align-items:center;gap:25px;font-size:13px}
+.nav a{padding:9px 0;position:relative}
+.nav a:not(.nav-cta):hover,.nav a.active{color:var(--gold2)}
+.nav a:not(.nav-cta).active:after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold)}
+.nav-cta{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#241108!important;padding:12px 18px!important;border-radius:30px;font-weight:700}
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;width:42px}
+.menu-toggle span{display:block;height:2px;background:var(--gold2);margin:6px 0}
+.hero{min-height:650px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 30%,#6a3212 0,#351307 35%,#1c0903 75%)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 0 48%,rgba(217,168,61,.08) 49%,transparent 50%);pointer-events:none}
+.hero-content{position:relative;z-index:2;padding:70px 20px}
+.crown{color:var(--gold2);font-size:40px;line-height:1}
+.eyebrow{font-size:12px;letter-spacing:5px;margin-top:18px;color:#dfc79e}
+h1{font:600 clamp(58px,10vw,110px)/.9 "Playfair Display",serif;text-transform:uppercase;letter-spacing:2px;margin-top:12px}
+.script{font:48px/1.1 "Great Vibes",cursive;color:var(--gold2)}
+.hero .script{margin-top:12px}
+.tagline{font-size:21px;line-height:1.45;margin:28px 0;color:#fff8ee}
+.tagline span{color:var(--gold2)}
+.hero-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn{border:0;cursor:pointer;padding:15px 24px;border-radius:30px;font-weight:700;display:inline-flex;gap:12px;align-items:center;justify-content:center;transition:.25s;min-height:50px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(0,0,0,.25)}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1007}
+.btn-outline{border:1px solid var(--gold);color:var(--white);background:transparent}
+.btn-outline:hover{background:rgba(217,168,61,.1)}
+.section-light{background:var(--cream);color:var(--ink);padding:90px 5%}
+.section-heading{text-align:center;margin-bottom:45px}
+.section-heading h2{font:600 30px "Playfair Display",serif;margin:8px 0}
+.section-heading>p:last-child{color:var(--muted)}
+.service-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service-card{background:#fff;border:1px solid #e6d7c5;border-radius:22px;padding:25px 18px;text-align:center;min-height:190px;box-shadow:0 8px 25px rgba(72,38,17,.06);transition:.3s}
+.service-card:hover{transform:translateY(-7px);border-color:var(--gold)}
+.service-icon{font-size:38px;margin-bottom:15px}
+.service-card h3{font-family:"Playfair Display",serif;font-size:20px}
+.service-card p{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.5}
+.promise{padding:60px 5%;background:#fffaf4;display:flex;justify-content:center}
+.promise-card{max-width:650px;width:100%;padding:50px;text-align:center;border:1px solid var(--gold);border-radius:30px;background:linear-gradient(135deg,#351307,#1e0903);box-shadow:0 15px 40px rgba(43,17,7,.2)}
+.promise-card .script{font-size:50px}
+.promise ul{list-style:none;margin:28px auto 0;max-width:360px;text-align:left;display:grid;gap:12px}
+.promise li:before{content:"✓";color:var(--gold2);margin-right:12px;font-weight:700}
+.tarifs{min-height:430px;padding:90px 8%;display:grid;place-items:center;text-align:center;background:linear-gradient(110deg,#1d0903,#4c1f0b,#210b03)}
+.tarif-content h2{font:600 34px "Playfair Display",serif;margin:10px 0}
+.tarif-content>p:not(.script){color:#e7d5c3;margin-bottom:28px}
+.price-panel{margin-top:20px;border:1px solid rgba(217,168,61,.5);border-radius:18px;padding:20px;background:rgba(0,0,0,.18)}
+.price-panel a{display:inline-block;color:var(--gold2);margin-top:10px}
+.booking{padding:90px 5%;background:#210b03}
+.section-heading.light{color:var(--white)}
+.booking-form{max-width:820px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.booking-form label{font-size:12px;color:#e8d7c5;display:grid;gap:8px}
+.booking-form input,.booking-form select{width:100%;border:1px solid rgba(217,168,61,.45);background:#301107;color:#fff;padding:15px 16px;border-radius:13px;outline:none;font:inherit}
+.booking-form input:focus,.booking-form select:focus{border-color:var(--gold2);box-shadow:0 0 0 3px rgba(217,168,61,.1)}
+.booking-form select option{background:#301107}
+.booking-form .full{grid-column:1/-1}
+.form-note{grid-column:1/-1;text-align:center;color:#bca999;font-size:12px}
+.contact-card{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #dfcbb6;border-radius:24px;overflow:hidden;background:#fff}
+.contact-item{text-align:center;padding:38px 20px;border-right:1px solid #e5d8ca}
+.contact-item:last-child{border-right:0}
+.contact-item>span:first-child{font-size:28px;display:block;margin-bottom:15px}
+.contact-item h3{font:600 18px "Playfair Display",serif}
+.contact-item p{font-size:13px;color:var(--muted);line-height:1.7;margin:10px 0 16px}
+.contact-item a{display:inline-block;background:var(--brown);color:white;padding:10px 15px;border-radius:20px;font-size:12px}
+.pending{font-size:11px;color:#9a7859}
+footer{padding:30px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid rgba(217,168,61,.25);font-size:12px;color:#c9b6a5}
+.whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-size:28px;z-index:999;box-shadow:0 8px 25px rgba(0,0,0,.3)}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:950px){.nav{gap:13px;font-size:12px}.service-grid{grid-template-columns:repeat(2,1fr)}.contact-card{grid-template-columns:repeat(2,1fr)}.contact-item:nth-child(2){border-right:0}.contact-item:nth-child(-n+2){border-bottom:1px solid #e5d8ca}}
+@media(max-width:760px){
+ .header{height:72px}.menu-toggle{display:block}.nav{position:absolute;top:72px;left:0;right:0;background:rgba(35,12,5,.99);display:none;flex-direction:column;align-items:stretch;padding:15px 6%;border-bottom:1px solid rgba(217,168,61,.35);box-shadow:0 15px 30px rgba(0,0,0,.3)}
+ .nav.open{display:flex}.nav a{padding:13px 0}.nav-cta{text-align:center;margin-top:5px}.brand strong{font-size:15px}.brand-mark{width:42px;height:42px}
+ .hero{min-height:600px}.hero-content{padding:55px 16px}h1{font-size:58px}.hero .script{font-size:38px}.tagline{font-size:18px}
+ .section-light,.booking,.tarifs{padding:65px 5%}.service-grid{grid-template-columns:1fr 1fr;gap:12px}.service-card{min-height:165px;padding:20px 12px}.service-card h3{font-size:17px}
+ .script{font-size:42px}.promise-card{padding:35px 22px}.booking-form{grid-template-columns:1fr}.booking-form .full,.form-note{grid-column:1}
+ .contact-card{grid-template-columns:1fr}.contact-item{border-right:0!important;border-bottom:1px solid #e5d8ca}.contact-item:last-child{border-bottom:0}
+ footer{flex-direction:column;text-align:center}.footer-brand{justify-content:center}
+}
+@media(max-width:420px){h1{font-size:48px}.hero-actions .btn{width:100%}.service-grid{grid-template-columns:1fr 1fr}.service-card p{font-size:11px}.section-heading h2{font-size:25px}}

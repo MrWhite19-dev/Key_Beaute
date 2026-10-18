@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Key Beauté — Maison d'esthétique à Yopougon Yangon Sud. Découvrez nos services beauté et prenez rendez-vous sur WhatsApp.">
+  <title>Key Beauté — Maison d'esthétique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="accueil">
+    <a class="brand" href="#accueil" aria-label="Key Beauté accueil">
+      <span class="brand-mark">KB</span>
+      <span><strong>KEY BEAUTÉ</strong><small>Maison d'esthétique</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav">
+      <a class="active" href="#accueil">Accueil</a>
+      <a href="#services">Nos services</a>
+      <a href="#tarifs">Nos tarifs</a>
+      <a href="#rendez-vous">Rendez-vous</a>
+      <a href="#contact">Où nous trouver</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#rendez-vous">Prendre rendez-vous</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content reveal">
+        <div class="crown">♕</div>
+        <p class="eyebrow">BIENVENUE CHEZ</p>
+        <h1>Key Beauté</h1>
+        <p class="script">Maison d'esthétique</p>
+        <p class="tagline">Pas besoin d'une grande poche<br>pour se faire belle. <span>♡</span></p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#rendez-vous">Prendre rendez-vous <span>→</span></a>
+          <a class="btn btn-outline" href="#services">Découvrir nos services <span>→</span></a>
+        </div>
+      </div>
+      <div class="hero-decor decor-one"></div>
+      <div class="hero-decor decor-two"></div>
+    </section>
+
+    <section class="services section-light" id="services">
+      <div class="section-heading reveal">
+        <p class="script">Nos services <span>♡</span></p>
+        <h2>Tout pour révéler votre beauté</h2>
+        <p>Venez voir nos services les filles 😘</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal"><div class="service-icon">💅🏽</div><h3>Vernis</h3><p>Des ongles élégants et soignés.</p></article>
+        <article class="service-card reveal"><div class="service-icon">👁️</div><h3>Faux cils</h3><p>Un regard qui fait la différence.</p></article>
+        <article class="service-card reveal"><div class="service-icon">✨</div><h3>Soin du visage</h3><p>Un moment douceur pour votre peau.</p></article>
+        <article class="service-card reveal"><div class="service-icon">💖</div><h3>Manucure</h3><p>Des mains impeccables au quotidien.</p></article>
+        <article class="service-card reveal"><div class="service-icon">🦶🏽</div><h3>Pédicure</h3><p>Beauté et confort jusqu'au bout des pieds.</p></article>
+        <article class="service-card reveal"><div class="service-icon">💇🏽‍♀️</div><h3>Coiffure</h3><p>Des styles adaptés à vos envies.</p></article>
+        <article class="service-card reveal"><div class="service-icon">💄</div><h3>Maquillage</h3><p>Une mise en beauté pour chaque occasion.</p></article>
+        <article class="service-card reveal"><div class="service-icon">🌸</div><h3>Soins beauté</h3><p>Des prestations pensées pour vous.</p></article>
+      </div>
+    </section>
+
+    <section class="promise">
+      <div class="promise-card reveal">
+        <span class="crown">♕</span>
+        <p class="script">Votre beauté,<br>notre priorité</p>
+        <ul>
+          <li>Produits de qualité</li>
+          <li>Ambiance relaxante</li>
+          <li>Personnel attentionné</li>
+          <li>Hygiène & sécurité</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tarifs" id="tarifs">
+      <div class="tarif-content reveal">
+        <p class="script">Nos tarifs <span>♡</span></p>
+        <h2>La beauté à votre portée</h2>
+        <p>Pas besoin d'une grande poche pour se faire belle.</p>
+        <button class="btn btn-gold" id="showPrices">Découvrir les tarifs <span>→</span></button>
+        <div class="price-panel" id="pricePanel" hidden>
+          <p>Les tarifs détaillés seront bientôt disponibles.</p>
+          <a href="#rendez-vous">Demander un tarif sur WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="rendez-vous">
+      <div class="section-heading light reveal">
+        <p class="script">Prendre rendez-vous</p>
+        <h2>C'est simple et rapide !</h2>
+      </div>
+
+      <form class="booking-form reveal" id="bookingForm">
+        <label>Votre nom<input type="text" id="name" placeholder="Votre nom" required></label>
+        <label>Numéro WhatsApp<input type="tel" id="phone" placeholder="07 XX XX XX XX" required></label>
+        <label>Service souhaité
+          <select id="service" required>
+            <option value="">Choisir un service</option>
+            <option>Vernis</option><option>Faux cils</option><option>Soin du visage</option>
+            <option>Manucure</option><option>Pédicure</option><option>Coiffure</option>
+            <option>Maquillage</option><option>Autre service</option>
+          </select>
+        </label>
+        <label>Date souhaitée<input type="date" id="date" required></label>
+        <label>Heure souhaitée<input type="time" id="time" required></label>
+        <button class="btn btn-gold full" type="submit">Confirmer ma demande <span>→</span></button>
+        <p class="form-note">Votre demande sera préparée et envoyée directement sur WhatsApp.</p>
+      </form>
+    </section>
+
+    <section class="contact section-light" id="contact">
+      <div class="contact-card reveal">
+        <div class="contact-item"><span>📍</span><h3>Notre emplacement</h3><p>Yopougon Yangon Sud<br>à droite — Rue 253</p><a href="https://www.google.com/maps/search/?api=1&query=Yopougon+Yangon+Sud+Rue+253" target="_blank" rel="noopener">Voir l'itinéraire</a></div>
+        <div class="contact-item"><span>📞</span><h3>Nos contacts</h3><p>WhatsApp : <strong>07 08 61 12 23</strong><br>Téléphone : <strong>07 15 74 01 03</strong></p><a href="tel:+2250715740103">Nous appeler</a></div>
+        <div class="contact-item"><span>🕒</span><h3>Nos horaires</h3><p>Ouverts du lundi au vendredi</p><span class="pending">Horaires exacts à confirmer</span></div>
+        <div class="contact-item"><span>♡</span><h3>Suivez-nous</h3><p>Instagram • TikTok • Snapchat</p><span class="pending">Liens à ajouter</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">KB</span><span><strong>KEY BEAUTÉ</strong><small>Maison d'esthétique</small></span></div>
+    <p>Parce que chaque femme mérite de se sentir belle. ♡</p>
+    <small>© <span id="year"></span> Key Beauté — Tous droits réservés.</small>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/2250545239483" target="_blank" rel="noopener" aria-label="Contacter Key Beauté sur WhatsApp">☘</a>
+  <script src="script.js"></script>
+</body>
+</html>
